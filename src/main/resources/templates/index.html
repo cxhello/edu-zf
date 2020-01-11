@@ -1,0 +1,139 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>信息中心</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="Copyright" content="zfsoft">
+<link rel="icon" href="#" type="image/x-icon">
+<link rel="shortcut icon" href="#" type="image/x-icon">
+<style type="text/css">
+    .active{font-weight: bolder;}
+    #navbar-tabs li{ margin-top: 2px;}
+    #navbar-tabs li a{ border-top: 2px solid transparent;}
+    #navbar-tabs li.active a{border-top: 2px solid #0770cd;}
+</style>
+<!--jQuery核心框架库 -->
+<script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+
+
+<!--
+jquery.ui 需要在bootstrap之前加载，解决冲突问题
+http://blog.csdn.net/remote_roamer/article/details/14105999
+-->
+
+<!--Bootstrap布局框架-->
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="/css/zftal-ui.css">
+<script type="text/javascript" src="/js/bootstrap.min.js" charset="utf-8"></script>
+<!--jQuery.chosen美化插件-->
+<link rel="stylesheet" type="text/css" href="/css/chosen-min.css">
+<script type="text/javascript" src="/js/jquery.choosen.concat-min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/zh_CN-min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/jquery.utils.pinyin.min.js" charset="utf-8"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://ptu-1253784481.cosgz.myqcloud.com/zftal-ui-v5-1.0.2/assets/js/html5shiv.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://ptu-1253784481.cosgz.myqcloud.com/zftal-ui-v5-1.0.2/assets/js/respond.min.js" charset="utf-8"></script>
+<![endif]-->
+
+<!--业务模块的properties初始化-->
+<!--国际化js库 -->
+
+<input type="hidden" id="pkey" name="pkey" value="">
+<!-- 头部 开始 -->
+<header class="navbar-inverse top2">
+    <div class="container" id="navbar_container">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only"> 学生成绩查询</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+              <a href="logout" id="topButton" class="navbar-brand" onclick="" style="text-align: center;">
+                  <tr th:each="score,scorerStat:${scoreList}">
+                      <td th:if="${scorerStat.index}==0" th:text="${score.jgmc}">neo</td>
+                      <td th:if="${scorerStat.index}==0" th:text="${score.bj}">neo</td>
+                      <td th:if="${scorerStat.index}==0" th:text="${score.xm}">neo</td>
+                  </tr>
+
+                        您的成绩单如下
+              </a>
+
+                <script type="text/javascript">
+
+                </script>
+            </div>
+            <ul class="nav navbar-nav navbar-right  hidden-xs">
+                <li><a href="logout" id="exit"><i class="top_png tc"></i>退出</a></li>
+            </ul>
+        </div>
+        <!-- navbar-end  -->
+    </div>
+</header>
+
+<!--头部 结束 -->
+<div style="width: 100%; padding: 0px; margin: 0px;" id="bodyContainer">
+    <!-- requestMap中的参数为系统级别控制参数，请勿删除 -->
+
+    <div class="container container-func sl_all_bg" id="yhgnPage" style="min-height: 585px;">
+        <div id="innerContainer">
+            <!-- 放置页面显示内容 -->
+
+            <!-- 功能操作 -->
+            <div class="row sl_add_btn">
+                <div class="col-sm-12">
+                    <!-- 加载当前菜单栏目下操作N305005 -->
+                    <div class="btn-toolbar" role="toolbar" style="float:right;"><div class="btn-group" id="but_ancd"></div> </div>
+                    <!-- 加载当前菜单栏目下操作 -->
+                </div>
+            </div>
+            <!-- form -start  -->
+
+            <form id="searchForm" name="searchForm" action="" method="get" class="form-horizontal sl_all_form" novalidate="novalidate">
+                    <!-- form -end  -->
+                    <!-- btn-start  -->
+
+                    <!-- btn-end  -->
+                    <!-- table-start  -->
+                    <div class="with:80%">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>课程名</th>
+                                <th>成绩</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr  th:each="score : ${scoreList}">
+                                <td th:text="${score.kcmc}">neo</td>
+                                <td th:text="${score.cj}">neo</td>
+                            </tr>
+                            <!-- table-end  -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <!-- footer -->
+
+
+    <!-- footer -->
+    <div id="footerID" class="footer">
+        <p>版权所有© Copyright 2019-2020  ©信息中心</p>
+    </div>
+    <!-- footer-end -->
+    <!-- footer-end -->
+</body>
+
+</div>
+</body>
+</html>

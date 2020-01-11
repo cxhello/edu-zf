@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="Copyright" content="zfsoft">
+
+    <script type="text/javascript">
+        var _path 				= "/jwglxt";
+        var _systemPath 		= "/jwglxt";
+        var _stylePath 			= "http://ptu-1253784481.cosgz.myqcloud.com/zftal-ui-v5-1.0.2";
+    </script>
+    <!--jQuery核心框架库 -->
+    <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+    <!--jQuery常用工具扩展库：基础工具,资源加载工具,元素尺寸相关工具 -->
+    <script type="text/javascript" src="/js/jquery.utils.contact-min.js" charset="utf-8"></script>
+    <!--jQuery浏览器检测 -->
+
+    <script type="text/javascript">
+
+    </script>
+    <!--Bootstrap布局框架-->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/zftal-ui.css">
+    <script type="text/javascript" src="/js/bootstrap.min.js" charset="utf-8"></script>
+    <!--jQuery.chosen美化插件-->
+    <link rel="stylesheet" type="text/css" href="/css/chosen-min.css">
+    <script type="text/javascript" src="/js/jquery.choosen.concat-min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/zh_CN-min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/jquery.utils.pinyin.min.js" charset="utf-8"></script>
+
+    <!--业务框架前端脚本国际化库-->
+    <script type="text/javascript" src="/js/jquery.zftal_zh_CN-min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://ptu-1253784481.cosgz.myqcloud.com/zftal-ui-v5-1.0.2/assets/js/html5shiv.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://ptu-1253784481.cosgz.myqcloud.com/zftal-ui-v5-1.0.2/assets/js/respond.min.js" type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+
+    <meta http-equiv="Content-Security-Policy" content="script-src &#39;self&#39; http://ptu-1253784481.cosgz.myqcloud.com &#39;unsafe-inline&#39;">
+
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <style type="text/css">
+        .btn-lang{
+            width: 76px;
+            border-color: #357ebd;
+            font-weight: bold;
+            height: 30px;
+        }
+        .btn-lang-enabled {
+            background-color: #428bca;
+            color:#fff;
+        }
+        .btn-lang-disabled {
+            background-color: #fff;
+            color: #333;
+        }
+        .btn-lang-enabled:hover,.btn-lang-enabled:focus {
+            color:#fff;
+        }
+        .btn-group>.btn-lang:last-child{
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var login = document.getElementById("form1");
+            login.addEventListener("submit",function(event) {
+                var user = document.getElementsByName("username")[0];
+                var pwd = document.getElementsByName("password")[0];
+
+                if (user.value.length <= 0) {
+                    alert("请输入您的学号！");
+                    event.preventDefault()
+                    return false;
+                } else {
+                    //逻辑判断
+                }
+                if (pwd.value.length <= 0) {
+                    alert("请输入您密码！");
+                    event.preventDefault()
+                    return false;
+                } else {
+                    //逻辑判断
+                }
+
+            });
+        }
+    </script>
+</head>
+
+<body style="background:#fafafa;">
+
+<input type="hidden" name="yzcskz" id="yzcskz" value="3">
+<input type="hidden" name="mmsfjm" id="mmsfjm" value="1">
+<input type="hidden" name="mmsrddcshkzfs" id="mmsrddcshkzfs" value="0">
+<input type="hidden" name="dlsbsdsj" id="dlsbsdsj" value="3">
+
+<div class="container container_1170">
+    <div class="row sl_log_top">
+        <div class="col-sm-8 logo_1"><img src="/img/logo_jw_d.png" style="margin-top:-3px">
+            <span id="xtmc">教学综合信息服务平台</span>
+        </div>
+        <div class="col-sm-4 text-right hidden-xs">
+
+
+        </div>
+    </div>
+    <div class="row sl_log_bor4">
+        <div class="col-sm-8 hidden-xs sl_log_lf">
+        </div>
+        <div class="col-sm-4 sl_log_rt">
+
+
+            <h5>用户登录</h5>
+            <!-- 防止浏览器自动填充密码 -->
+
+            <!-- 防止浏览器自动填充密码 end -->
+
+
+            <p style="display: none;" id="tips" class="bg_danger sl_danger">
+            </p>
+
+            <form action="login" method="post" id="form1">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><img src="/img/log_ic01.png" width="16" height="16"></div>
+                        <input type="username" class="form-control" name="username" id="username" value="" placeholder="用户名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><img src="/img/log_ic02.png" width="16" height="16"></div>
+                        <input  class="form-control" id="password" name="password" type="password" value="" placeholder="密码">
+                    </div>
+                </div>
+
+
+
+                <!-- 0-弹出验证码-->
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon">学年</div>
+                        <select name="xnm" id="year" class="form-control chosen-select" style="">
+                            <option value="2019">2019-2020</option>
+                            <option value="2020">2020-2021</option>
+                            <option value="2021">2021-2022</option>
+                            <option value="2022">2022-2023</option>
+                            <option value="2023">2023-2024</option>
+                            <option value="2024">2024-2025</option>
+                            <option value="2025">2025-2026</option>
+                            <option value="2026">2026-2027</option>
+                            <option value="2027">2027-2028</option>
+                            <option value="2028">2028-2029</option>
+                            <option value="2029">2029-2030</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon">学期</div>
+                        <select name="xqm" id="xq" class="form-control chosen-select" style="">
+                            <option value="3">1</option>
+                            <option value="12">2</option>
+                            <option value="16">3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <span style="color: red"; th:if="${not #strings.isEmpty(message)}" th:text="${message}"></span>
+
+                <div class="form-group">
+                    <!--<a href="/jwglxt/xtgl/init_fkIndex.html" class="checkbox pull-left" target="_blank">访客登录</a> -->
+                    <!-- <a href="#" class="checkbox pull-right" target="_blank">忘记密码了？</a> -->
+                </div>
+                <div class="form-group" id="myDiv">
+                    <!--<a href="/jwglxt/xtgl/init_fkIndex.html" class="checkbox pull-left" target="_blank">访客登录</a> -->
+
+
+
+
+
+                </div>
+                <div class="form-group">
+                    <button id="surebt" type="submit" class="btn btn-primary btn-block">登 录</button>
+
+                </div>
+                <!-- 登录口提示信息 -->
+
+            </form>
+
+            <div class="sl_log_ewm hidden-xs"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer -->
+<div id="footerID" class="footer">
+    <p>版权所有© Copyright 2019-2020  ©信息中心</p>
+</div>
+<!-- footer-end -->
+
+
+
+</body></html>
